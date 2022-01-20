@@ -38,9 +38,6 @@ const Post = ({ data }) => {
             primaryAction={{
                 content: firstMounted ? (likedPosts.some(e => e.title === r.title) ? 'Unlike' : 'Like') : (liked ? 'Unlike' : 'Like'),
                 onAction: () => handleLiked(r, (likedPosts.some(e => e.title === r.title) ? true : false)),
-                icon: <span className="material-icons">
-                favorite
-                </span>
             }}
             description={r.explanation}
             popoverActions={[{content: "Dismiss", onAction: () => {}}]}
